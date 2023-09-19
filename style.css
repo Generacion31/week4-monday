@@ -1,0 +1,85 @@
+/* QUE ES CSS? (Cascading Style Sheets) significa hojas de estilo en cascadas */
+
+/* que es una regla css? */
+/* Una regla css esta formada por un selector una declaracion, la declaracion siempre va dentro de llaves y dentro de las llaves se encuentran que las propiedades con su valor y debe finalizar con punto y coma */
+
+/* estructura de un selector */
+/* selector{
+ propiedad:valor;
+}*/
+
+body {
+  background-color: rgb(234, 232, 237);
+  background-color: aqua;
+}
+
+/* selectores */
+
+/* selector universal */
+
+* {
+  font-style: normal;
+  /* font-style , definimos el tipo de tipografia. Los valores usados son: normal, italic,oblique */
+  font-weight: bold;
+  /* font-weight es el grosor de la fuente */
+  font-size: 16px;
+  /* tamano de la fuente */
+  line-height: 16px;
+  /* se usa para estableces frecuentemente la distancia entre las lineas */
+  font-family: sans-serif;
+  /* Definimos el tipo de fuente de la pagina */
+}
+
+/* selectores por tipo */
+/* los selectores de tipo hacen referencia a elementos html */
+
+h1 {
+  color: blueviolet;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* selectores de clases */
+.titulo {
+  color: cornflowerblue;
+  text-align: right;
+}
+
+.subrayado {
+  text-decoration: underline;
+}
+
+/* selectores por ID */
+#section1 {
+  background-color: rgb(224, 224, 214);
+}
+
+/* Operadores de combinaciones de selectores */
+/* hijos directors (>)*/
+
+.contenedor-principal>p {
+  font-size: 14px;
+  margin: 0;
+  color: lightslategray;
+}
+
+/* descendientes */
+.contenedor-principal p {
+  text-decoration: underline;
+}
+
+#section1 img {
+  border: 3px dashed red;
+}
+
+/* hermanos adyacentes */
+
+/* se le aplica al hermano proximo, siempre y cuando compartan el mismo padre. Seleccionara inmediatamente al hermano adyacente */
+.item1+li {
+  color: green;
+}
+
+/* el combinador ~ separa dos elementos y selecciona al segundo si comparten el mismo padres y se le aplicara a todos los descendientes la misma propiedad css */
+.item1~li {
+  color: blue;
+}
