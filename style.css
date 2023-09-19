@@ -83,3 +83,74 @@ h1 {
 .item1~li {
   color: blue;
 }
+
+/* Selector de pseudo-calse */
+/* Es una palabra clave que se añade a los selectores y especificar un estado especial del elemento seleccionado */
+.titulo {
+  transition: 0.5s;
+}
+
+.titulo:hover {
+  color: blueviolet;
+  font-size: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+ul li:first-child {
+  /* selecciona al primer elemento */
+  font-size: 20px;
+}
+
+ul li:last-child {
+  font-size: 12px;
+  color: red;
+}
+
+ul li:nth-child(2) {
+  /* accedi al segundo  */
+  text-decoration: line-through;
+}
+
+ul li:nth-child(2n+ 3) {
+  /*         cuantos y desde*/
+  padding-left: 90px;
+}
+
+ul li:nth-child(even) {
+  background-color: bisque;
+}
+
+ul li:nth-child(odd) {
+  background-color: green;
+}
+
+.contenedor-principal>p:last-of-type {
+  background-color: lightpink;
+}
+
+.contenedor-principal>p:nth-of-type(2) {
+  background-color: lightblue;
+  font-style: italic;
+}
+
+
+.seccion *:not(h3) {
+  color: brown;
+}
+
+
+/* selectror pseudo-elemento */
+
+.subtitulo::before {
+  content: "💪";
+}
+
+.contenido::first-letter {
+  font-size: 40px;
+  font-family: fantasy;
+}
+
+.contenido::first-line {
+  background-color: lightseagreen;
+}
